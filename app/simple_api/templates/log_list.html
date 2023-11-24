@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs</title>
+</head>
+<body>
+    <h2>Logs</h2>
+    <ul>
+        {% for log in logs %}
+            <li>{{ log.created_at }}: {{ log.request_data }} - {{ log.response_data }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
