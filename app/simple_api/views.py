@@ -16,7 +16,7 @@ class LogListView(ListView):
 def process_request(request):
     request_data = request.data.get('question', '')
 
-    log = Log(request_data=request_data, response_data="Hello, I'm fine")
+    log = Log(request_data=request_data, response_data="Привет, все хорошо.")
     log.save()
 
     serializer = LogSerializer(log)
